@@ -1,0 +1,267 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+
+@font-face {
+    font-family: 'Avenir Next Regular';
+    src: url(../assets/Font/AvenirNextLTPro-Regular.otf) format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next Demi';
+    src: url(../assets/Font/AvenirNextLTPro-Demi.otf) format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next Bold';
+    src: url(../assets/Font/AvenirNextLTPro-Bold.otf) format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Avenir Next Regular';
+}
+
+.header {
+    background-color: $bandsite-black;
+
+    &--tablet{
+        @include tablet {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0 36px;
+        }
+
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+
+        @include desktop {
+            
+        }
+
+        &--img {
+            max-width: 120px;
+            max-height: 20px;
+
+        }
+    }
+
+    &__nav {
+
+        &--links {
+            color: $white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+            text-decoration: none;
+            padding: 0 16px;
+            margin: 0px 0px 16px 0px;
+        }
+
+        &--specific-link {
+            font-size: .9rem;
+        }
+    }
+
+    &__hero {
+        position: relative;
+
+        &--img {
+            width: 100vw;
+            height: 200px;
+            z-index: 1;
+            background-image: url(../assets/Images/hero-bio.jpg);
+            background-size: cover;
+            background-position: center;
+
+            @include tablet {
+                height: 45vh;
+            }
+        }
+
+        &--text {
+            color: $white;
+            z-index: 9;
+            position: absolute;
+            top: 70px;
+            left: 16px;
+            font-size: 24px;
+            font-weight: 700;
+
+            @include tablet {
+                font-size: 60px;
+                padding-left: 36px;
+                top: 100px;
+            }
+        }
+
+        &--overlay {
+            background-color: $bandsite-black;
+            opacity: 50%;
+            width: 100vw;
+            height: 200px;
+            position: absolute;
+
+            @include tablet {
+                height: 45vh;
+            }
+        }
+    }
+
+}
+
+.main {
+    margin: 0;
+    color: $bandsite-black;
+
+    &__header {
+        padding: 24px 16px 16px 16px;
+        margin: 0;
+        font-size: 24px;
+
+        @include tablet {
+            font-size: 36px;
+            padding: 48px 36px 0px 36px;
+        }
+
+        &--subheader {
+            margin: 0;
+            padding: 0 16px;
+            font-weight: 600;
+            font-size: .9rem;
+        }
+
+        &--image {
+            max-width: 90%;
+            padding: 0px 16px 16px 16px;
+
+            @include tablet {
+                // padding: 0 48px;
+                padding: 36px; 
+            }
+        }
+
+        &--quote {
+            margin: 0;
+            padding-bottom: 8px;
+
+            @include tablet {
+                padding: 8px 36px;
+                font-size: 24px;
+                font-weight: 700;
+            }
+
+            &--smaller {
+                @include tablet {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    &__body {
+        padding: 16px 16px;
+        font-size: .85rem;
+
+        &--copy {
+            @include tablet {
+                display: flex;
+                font-size: 14px;
+            }
+        }
+
+        &--title {
+            margin: 0;
+            padding-bottom: 24px;
+
+            @include tablet {
+                padding: 0 36px;
+            }
+
+            &--bold {
+                font-weight: 600;
+
+                @include tablet {
+                    padding: 0 36px;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    &__photo-gallery {
+        background-color: $alabaster;
+        padding: 0px 16px;
+
+        @include tablet {
+            padding: 48px 36px 36px 36px;
+        }
+
+        &--text {
+            margin: 0;
+            padding-bottom: 16px;
+        }
+
+        &--image {
+            max-width: 100%;
+            padding-bottom: 16px;
+        }
+    }
+}
+
+.footer {
+    background-color: $bandsite-black;
+    color: $white;
+    margin: 0;
+    font-size: .8rem;
+    font-weight: 400;
+
+    &__copy--title {
+        margin: 0;
+        padding: 24px 16px 16px 16px;
+        font-size: 1.5rem;
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: space-between;
+        max-width: 130px;
+        padding-left: 16px;
+    }
+
+    &__heading {
+        padding-left: 16px;
+        font-size: .85rem;
+        font-weight: 600;
+    }
+
+    &__information {
+        padding-left: 16px;
+
+        &--copyright {
+            font-size: .65rem;
+            margin-bottom: 0;
+            padding-bottom: 16px;
+        }
+    }
+
+    &__image {
+        max-width: 120px;
+        max-height: 20px;
+        padding-left: 16px;
+    }
+}
+
