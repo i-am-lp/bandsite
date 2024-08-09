@@ -43,6 +43,11 @@ body {
   max-width: 120px;
   max-height: 20px;
 }
+@media screen and (min-width: 768px) {
+  .header__nav {
+    width: 25%;
+  }
+}
 .header__nav--links {
   color: #FFFFFF;
   display: flex;
@@ -55,6 +60,13 @@ body {
 }
 .header__nav--specific-link {
   font-size: 0.9rem;
+  padding: 10px;
+}
+.header__nav--specific-link--bio {
+  border-bottom: 3px solid #FFFFFF;
+}
+.header__nav--specific-link--shows {
+  border-bottom: 3px solid #FFFFFF;
 }
 .header__hero {
   position: relative;
@@ -229,11 +241,18 @@ body {
   margin: 0;
   font-size: 0.8rem;
   font-weight: 400;
+  position: relative;
 }
 .footer__copy--title {
   margin: 0;
   padding: 24px 16px 16px 16px;
   font-size: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__copy--title {
+    padding: 48px 36px 36px 36px;
+    font-size: 2.5rem;
+  }
 }
 .footer__socials {
   display: flex;
@@ -241,10 +260,30 @@ body {
   max-width: 130px;
   padding-left: 16px;
 }
+@media screen and (min-width: 768px) {
+  .footer__socials {
+    width: 15%;
+    font-family: "Avenir Next Demi";
+    padding: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer--tablet {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
 .footer__heading {
   padding-left: 16px;
   font-size: 0.85rem;
   font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .footer__heading {
+    font-family: "Avenir Next Demi";
+    font-size: 0.9rem;
+  }
 }
 .footer__information {
   padding-left: 16px;
@@ -254,8 +293,30 @@ body {
   margin-bottom: 0;
   padding-bottom: 16px;
 }
+@media screen and (min-width: 768px) {
+  .footer__information--copyright {
+    font-size: 0.9rem;
+    padding: 0 36px 36px 36px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer--contact-tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 36px 36px 36px;
+    font-size: 0.9rem;
+  }
+}
 .footer__image {
   max-width: 120px;
   max-height: 20px;
   padding-left: 16px;
+}
+@media screen and (min-width: 768px) {
+  .footer__image {
+    position: absolute;
+    right: 36px;
+    top: 48px;
+  }
 }/*# sourceMappingURL=bio.css.map */

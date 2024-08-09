@@ -60,6 +60,10 @@ body {
 
     &__nav {
 
+        @include tablet {
+            width: 25%;
+        }
+
         &--links {
             color: $white;
             display: flex;
@@ -73,6 +77,15 @@ body {
 
         &--specific-link {
             font-size: .9rem;
+            padding: 10px;
+
+            &--bio {
+                border-bottom: 3px solid $white;
+            }
+
+            &--shows {
+                border-bottom: 3px solid $white;
+            }
         }
     }
 
@@ -254,11 +267,17 @@ body {
     margin: 0;
     font-size: .8rem;
     font-weight: 400;
+    position: relative;
 
     &__copy--title {
         margin: 0;
         padding: 24px 16px 16px 16px;
         font-size: 1.5rem;
+
+        @include tablet {
+            padding: 48px 36px 36px 36px;
+            font-size: 2.5rem;
+        }
     }
 
     &__socials {
@@ -266,12 +285,31 @@ body {
         justify-content: space-between;
         max-width: 130px;
         padding-left: 16px;
+
+        @include tablet {
+            width: 15%;
+            font-family: 'Avenir Next Demi';
+            padding: 0;
+        }
+    }
+
+    &--tablet {
+        @include tablet {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
     }
 
     &__heading {
         padding-left: 16px;
         font-size: .85rem;
         font-weight: 600;
+
+        @include tablet {
+            font-family: 'Avenir Next Demi';
+            font-size: .9rem;
+        }
     }
 
     &__information {
@@ -281,6 +319,21 @@ body {
             font-size: .65rem;
             margin-bottom: 0;
             padding-bottom: 16px;
+
+            @include tablet {
+                font-size: .9rem;
+                padding: 0 36px 36px 36px;
+            }
+        }
+    }
+
+    &--contact-tablet {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 36px 36px 36px;
+            font-size: .9rem;
         }
     }
 
@@ -288,6 +341,13 @@ body {
         max-width: 120px;
         max-height: 20px;
         padding-left: 16px;
+
+        @include tablet {
+            position: absolute;
+            right: 36px;
+            top: 48px;
+        }
     }
+
 }
 
