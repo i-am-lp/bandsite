@@ -26,11 +26,16 @@ body {
   background-color: #323232;
 }
 @media screen and (min-width: 768px) {
-  .header--tablet {
+  .header--tablet-desktop {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 0 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header--tablet-desktop {
+    padding: 0 80px;
   }
 }
 .header__logo {
@@ -97,10 +102,16 @@ body {
 }
 @media screen and (min-width: 768px) {
   .header__hero--text {
-    font-size: 60px;
+    font-size: 3.5rem;
     padding-left: 36px;
     top: 150px;
     font-family: "Avenir Next Demi";
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__hero--text {
+    padding: 0 80px;
+    font-size: 4.25rem;
   }
 }
 .header__hero--overlay {
@@ -132,6 +143,11 @@ body {
     font-family: "Avenir Next Demi";
   }
 }
+@media screen and (min-width: 1280px) {
+  .main__header {
+    padding: 48px 80px 0 80px;
+  }
+}
 .main__header--subheader {
   margin: 0;
   padding: 0 16px;
@@ -153,6 +169,16 @@ body {
     max-width: 85%;
   }
 }
+@media screen and (min-width: 1280px) {
+  .main__header--image {
+    max-width: 75vw;
+  }
+}
+.main__header--image--desktop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .main__header--quote {
   margin: 0;
   padding-bottom: 8px;
@@ -162,6 +188,14 @@ body {
     padding: 8px 36px;
     font-size: 1.75rem;
     font-family: "Avenir Next Demi";
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main__header--quote {
+    padding: 16px 160px;
+    font-size: 1.55rem;
+    font-family: "Avenir Next Demi";
+    max-width: 60%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -177,6 +211,11 @@ body {
 @media screen and (min-width: 768px) {
   .main__body {
     padding: 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main__body {
+    padding: 36px 160px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -195,6 +234,11 @@ body {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .main__body--title {
+    font-size: 1.1rem;
+  }
+}
 .main__body--title--bold {
   font-weight: 600;
 }
@@ -205,6 +249,12 @@ body {
     font-family: "Avenir Next Demi";
   }
 }
+@media screen and (min-width: 1280px) {
+  .main__body--title--bold {
+    font-size: 2rem;
+    font-family: "Avenir Next Demi";
+  }
+}
 .main__photo-gallery {
   background-color: #FAFAFA;
   padding: 0px 16px;
@@ -212,6 +262,11 @@ body {
 @media screen and (min-width: 768px) {
   .main__photo-gallery {
     padding: 48px 36px 36px 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main__photo-gallery {
+    padding: 48px 80px;
   }
 }
 .main__photo-gallery--text {
@@ -230,6 +285,14 @@ body {
          column-count: 3;
   }
 }
+@media screen and (min-width: 1280px) {
+  .main__photo-gallery--tablet {
+    display: grid;
+    grid-template-columns: repeat(3, 420px);
+    grid-gap: 24px;
+    justify-content: center;
+  }
+}
 .main__photo-gallery--image {
   max-width: 100%;
   padding-bottom: 16px;
@@ -243,6 +306,11 @@ body {
   font-weight: 400;
   position: relative;
 }
+@media screen and (min-width: 1280px) {
+  .footer {
+    padding: 36px 80px;
+  }
+}
 .footer__copy--title {
   margin: 0;
   padding: 24px 16px 16px 16px;
@@ -252,6 +320,12 @@ body {
   .footer__copy--title {
     padding: 48px 36px 36px 36px;
     font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__copy--title {
+    padding: 0;
+    margin-right: 48px;
   }
 }
 .footer__socials {
@@ -268,7 +342,7 @@ body {
   }
 }
 @media screen and (min-width: 768px) {
-  .footer--tablet {
+  .footer--tablet-desktop {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -299,13 +373,25 @@ body {
     padding: 0 36px 36px 36px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .footer__information--copyright {
+    font-size: 0.9rem;
+    padding: 46px 0;
+  }
+}
 @media screen and (min-width: 768px) {
-  .footer--contact-tablet {
+  .footer--contact-tablet-desktop {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 36px 36px 36px;
     font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer--contact-tablet-desktop {
+    max-width: 70%;
+    padding: 0;
   }
 }
 .footer__image {
@@ -317,6 +403,13 @@ body {
   .footer__image {
     position: absolute;
     right: 36px;
+    top: 48px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__image {
+    position: absolute;
+    right: 80px;
     top: 48px;
   }
 }/*# sourceMappingURL=bio.css.map */
