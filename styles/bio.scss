@@ -65,7 +65,7 @@ body {
         }
 
         &--links {
-            color: $white;
+            color: $mercury;
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -79,13 +79,18 @@ body {
             font-size: .9rem;
             padding: 10px;
 
-            &--bio {
-                border-bottom: 3px solid $white;
+            &:hover {
+                color: $white;
+                border-bottom: 3px solid $white; 
             }
 
-            &--shows {
+            &--bio {
                 border-bottom: 3px solid $white;
+                font-family: 'Avenir Next Bold';
+                color: $white;
             }
+
+    
         }
     }
 
@@ -311,6 +316,11 @@ body {
         &--image {
             max-width: 100%;
             padding-bottom: 16px;
+            filter: grayscale(1);
+
+            &:hover {
+                filter: unset;
+            }
         }
     }
 }

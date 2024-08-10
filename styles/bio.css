@@ -54,7 +54,7 @@ body {
   }
 }
 .header__nav--links {
-  color: #FFFFFF;
+  color: #E1E1E1;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -67,11 +67,14 @@ body {
   font-size: 0.9rem;
   padding: 10px;
 }
-.header__nav--specific-link--bio {
+.header__nav--specific-link:hover {
+  color: #FFFFFF;
   border-bottom: 3px solid #FFFFFF;
 }
-.header__nav--specific-link--shows {
+.header__nav--specific-link--bio {
   border-bottom: 3px solid #FFFFFF;
+  font-family: "Avenir Next Bold";
+  color: #FFFFFF;
 }
 .header__hero {
   position: relative;
@@ -296,6 +299,10 @@ body {
 .main__photo-gallery--image {
   max-width: 100%;
   padding-bottom: 16px;
+  filter: grayscale(1);
+}
+.main__photo-gallery--image:hover {
+  filter: unset;
 }
 
 .footer {
