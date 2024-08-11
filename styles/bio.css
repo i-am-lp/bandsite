@@ -66,6 +66,8 @@ body {
 .header__nav--specific-link {
   font-size: 0.9rem;
   padding: 10px;
+  text-decoration: none;
+  color: #E1E1E1;
 }
 .header__nav--specific-link:hover {
   color: #FFFFFF;

@@ -78,6 +78,8 @@ body {
         &--specific-link {
             font-size: .9rem;
             padding: 10px;
+            text-decoration: none;
+            color:$mercury;
 
             &:hover {
                 color: $white;
