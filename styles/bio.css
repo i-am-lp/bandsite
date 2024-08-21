@@ -310,10 +310,22 @@ body {
   padding: 16px;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .main__comments {
+    padding: 0 36px;
+    font-size: 1rem;
+  }
+}
 .main__comments--header {
   font-family: "Avenir Next Demi";
   padding-top: 0;
   margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .main__comments--header {
+    padding-top: 36px;
+    font-size: 2rem;
+  }
 }
 .main__comments--image {
   background-image: url(../assets/Images/Mohan-muruge.jpg);
@@ -324,8 +336,21 @@ body {
   position: absolute;
   top: 70px;
 }
+@media screen and (min-width: 768px) {
+  .main__comments--image {
+    height: 48px;
+    width: 48px;
+    top: 124px;
+    left: 76px;
+  }
+}
 .main__comments--form {
   margin-left: 48px;
+}
+@media screen and (min-width: 768px) {
+  .main__comments--form {
+    padding: 36px 72px 0 55px;
+  }
 }
 .main__comments--form--text {
   font-family: "Avenir Next Demi";
@@ -353,12 +378,31 @@ body {
   font-size: 1rem;
   margin-bottom: 16px;
 }
+@media screen and (min-width: 768px) {
+  .main__comments--form--button {
+    width: 150px;
+    padding: 0 32px;
+    float: right;
+    margin-top: 16px;
+    margin-right: 24px;
+  }
+}
 .main__comments--form--button:hover {
   background-color: #000000;
 }
 .main__comments__filled {
   border-top: 1px solid #E1E1E1;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .main__comments__filled {
+    margin: 24px 96px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main__comments__filled--first {
+    margin-top: 96px;
+  }
 }
 .main__comments__filled--last {
   border-bottom: 1px solid #E1E1E1;
