@@ -1,0 +1,98 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+
+@font-face {
+    font-family: 'Avenir Next Regular';
+    src: url(../assets/Font/AvenirNextLTPro-Regular.otf) format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next Demi';
+    src: url(../assets/Font/AvenirNextLTPro-Demi.otf) format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next Bold';
+    src: url(../assets/Font/AvenirNextLTPro-Bold.otf) format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Avenir Next Regular';
+}
+
+.header {
+    background-color: $bandsite-black;
+
+    &--tablet-desktop{
+        @include tablet {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0 36px;
+        }
+
+        @include desktop {
+            padding: 0 80px;
+        }
+
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+
+        &--img {
+            max-width: 120px;
+            max-height: 20px;
+
+        }
+    }
+
+    &__nav {
+
+        @include tablet {
+            width: 25%;
+        }
+
+        &--links {
+            color: $mercury;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+            text-decoration: none;
+            padding: 0 16px;
+            margin: 0px 0px 16px 0px;
+        }
+
+        &--specific-link {
+            font-size: .9rem;
+            padding: 10px;
+            text-decoration: none;
+            color:$mercury;
+
+            &:hover {
+                color: $white;
+                border-bottom: 3px solid $white; 
+            }
+
+            &--bio {
+                border-bottom: 3px solid $white;
+                font-family: 'Avenir Next Bold';
+                color: $white;
+            }
+
+    
+        }
+    }
+}
