@@ -374,7 +374,7 @@ body {
 }
 .main__comments--form--text {
   font-family: "Avenir Next Demi";
-  color: #AFAFAF;
+  color: #afafaf;
   font-size: 0.7rem;
 }
 @media screen and (min-width: 1280px) {
@@ -473,7 +473,7 @@ body {
   padding-top: 4px;
 }
 .main__comments__filled--text--date {
-  color: #AFAFAF;
+  color: #afafaf;
 }
 .main__comments__filled--image {
   background-color: #E1E1E1;
