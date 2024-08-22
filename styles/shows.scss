@@ -86,7 +86,7 @@ body {
                 border-bottom: 3px solid $white; 
             }
 
-            &--bio {
+            &--shows {
                 border-bottom: 3px solid $white;
                 font-family: 'Avenir Next Bold';
                 color: $white;
@@ -95,4 +95,163 @@ body {
     
         }
     }
+
+    &__hero {
+        position: relative;
+
+        &--img {
+            width: 100vw;
+            height: 200px;
+            z-index: 1;
+            background-image: url(../assets/Images/hero-shows.jpg);
+            background-size: cover;
+            background-position: center;
+
+            @include tablet {
+                height:70vh;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        &--text {
+            color: $white;
+            z-index: 9;
+            position: absolute;
+            top: 70px;
+            left: 16px;
+            font-size: 24px;
+            font-weight: 700;
+
+            @include tablet {
+                font-size: 3.5rem;
+                padding-left: 36px;
+                top: 150px;
+                font-family: 'Avenir Next Demi';
+            }
+
+            @include desktop {
+                padding: 0 80px;
+                font-size: 4.25rem;
+            }
+        }
+    }
+}
+
+
+
+.footer {
+    background-color: $bandsite-black;
+    color: $white;
+    margin: 0;
+    font-size: .8rem;
+    font-weight: 400;
+    position: relative;
+
+    @include desktop {
+        padding: 36px 80px;
+    }
+
+    &__copy--title {
+        margin: 0;
+        padding: 24px 16px 16px 16px;
+        font-size: 1.5rem;
+
+        @include tablet {
+            padding: 48px 36px 36px 36px;
+            font-size: 2.5rem;
+        }
+
+        @include desktop {
+            padding: 0;
+            margin-right: 48px;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: space-between;
+        max-width: 130px;
+        padding-left: 16px;
+
+        @include tablet {
+            width: 15%;
+            font-family: 'Avenir Next Demi';
+            padding: 0;
+        }
+    }
+
+    &--tablet-desktop {
+        @include tablet {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+
+    &__heading {
+        padding-left: 16px;
+        font-size: .85rem;
+        font-weight: 600;
+
+        @include tablet {
+            font-family: 'Avenir Next Demi';
+            font-size: .9rem;
+        }
+    }
+
+    &__information {
+        padding-left: 16px;
+
+        &--copyright {
+            font-size: .65rem;
+            margin-bottom: 0;
+            padding-bottom: 16px;
+
+            @include tablet {
+                font-size: .9rem;
+                padding: 0 36px 36px 36px;
+            }
+
+            @include desktop {
+                font-size: .9rem;
+                padding: 46px 0;
+            }
+        }
+    }
+
+    &--contact-tablet-desktop {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 36px 36px 36px;
+            font-size: .9rem;
+        }
+
+        @include desktop {
+            max-width: 70%;
+            padding: 0;
+
+        }
+    }
+
+    &__image {
+        max-width: 120px;
+        max-height: 20px;
+        padding-left: 16px;
+
+        @include tablet {
+            position: absolute;
+            right: 36px;
+            top: 48px;
+        }
+
+        @include desktop {
+            position: absolute;
+            right: 80px;
+            top: 48px;
+        }
+    }
+
 }
