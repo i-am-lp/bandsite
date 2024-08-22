@@ -5,21 +5,38 @@ const comments = [
 ];
 
 function createCommentSection(comment) {
-    const cardEl = document.createElement('article');
-    cardEl.classList.add('comment');
+    const cardEl = document.createElement('div');
+    cardEl.classList.add('main__comments__filled');
+
+    if (comments.indexOf(comment) === 0) {
+        cardEl.classList.add('main__comments__filled--first');
+    } else if (comments.indexOf(comment) === comments.length - 1) {
+        cardEl.classList.add('main__comments__filled--last');
+    }
+
+    const imageEl = document.createElement('div');
+    imageEl.classList.add('main__comments__filled--image');
+    cardEl.appendChild(imageEl);
+
+    const textEl = document.createElement('div');
+    textEl.classList.add('main__comments__filled--text');
 
     const heading = document.createElement('p');
+    heading.classList.add('main__comments__filled--text--name');
     heading.innerText = comment.name;
+    textEl.appendChild(heading);
 
     const dateEl = document.createElement('span');
+    dateEl.classList.add('main__comments__filled--text--date');
     dateEl.innerText = comment.date;
+    textEl.appendChild(dateEl);
 
     const commentEl = document.createElement('p');
+    commentEl.classList.add('main__comments__filled--text--copy');
     commentEl.innerText = comment.filledComment;
+    textEl.appendChild(commentEl);
 
-    cardEl.appendChild(heading);
-    cardEl.appendChild(dateEl);
-    cardEl.appendChild(commentEl);
+    cardEl.appendChild(textEl);
 
     return cardEl;
 }
@@ -27,10 +44,8 @@ function createCommentSection(comment) {
 function renderComment() {
     const myCommentEl = document.querySelector("#my-comments");
 
-    // Clear the appointments div first
     myCommentEl.innerHTML = "";
 
-    // Render all the appointments
     for (let i = 0; i < comments.length; i++) {
         const card = createCommentSection(comments[i]);
         myCommentEl.appendChild(card);
@@ -45,16 +60,18 @@ function handleFormSubmit(event) {
         comments: event.target.comments.value,
     };
 
+    const currentDate = new Date().toLocaleDateString();
+
     const cardData = {
-        name: event.target.name.value,
-        date: event.target.date.value,
-        filledComment: event.target.filledComment.value,
+        name: formSubmission.name,
+        date: currentDate,
+        filledComment: formSubmission.comments,
     };
 
-    comments.push(cardData);
+    comments.unshift(cardData); 
     renderComment();
 }
 
-const formEl = document.querySelector('#my-comments');
+const formEl = document.querySelector('#main__comments--form');
 formEl.addEventListener('submit', handleFormSubmit);
 renderComment();
