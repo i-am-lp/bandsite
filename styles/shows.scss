@@ -71,8 +71,8 @@ body {
             align-items: center;
             list-style: none;
             text-decoration: none;
-            padding: 0 16px;
-            margin: 0px 0px 16px 0px;
+            padding: 0;
+            margin: 0;
         }
 
         &--specific-link {
@@ -80,6 +80,8 @@ body {
             padding: 10px;
             text-decoration: none;
             color:$mercury;
+            flex-grow: 1;
+            text-align: center;
 
             &:hover {
                 color: $white;
@@ -101,7 +103,7 @@ body {
 
         &--img {
             width: 100vw;
-            height: 200px;
+            height: 240px;
             z-index: 1;
             background-image: url(../assets/Images/hero-shows.jpg);
             background-size: cover;
@@ -114,14 +116,24 @@ body {
             }
         }
 
+        &--album {
+            color: $white;
+            font-size: .8rem;
+            z-index: 9;
+            top: 6px;
+            left: 16px;
+            position: absolute;
+        }
+
         &--text {
             color: $white;
             z-index: 9;
             position: absolute;
-            top: 70px;
+            top: 26px;
             left: 16px;
             font-size: 24px;
-            font-weight: 700;
+            font-family: 'Avenir Next Demi';
+            width: 64%;
 
             @include tablet {
                 font-size: 3.5rem;
@@ -135,7 +147,30 @@ body {
                 font-size: 4.25rem;
             }
         }
+
+        &--overlay {
+            background-color: $bandsite-black;
+            opacity: 50%;
+            width: 100vw;
+            height: 240px;
+            position: absolute;
+
+            @include tablet {
+                height: 70vh;
+            }
+        }
+
+        &--soundcloud {
+            position: absolute;
+            top: 118px;
+            padding-left: 16px;
+        }
     }
+}
+
+.shows {
+    padding: 16px;
+    font-family: 'Avenir Next Demi';
 }
 
 

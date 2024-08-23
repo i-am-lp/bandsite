@@ -60,14 +60,16 @@ body {
   align-items: center;
   list-style: none;
   text-decoration: none;
-  padding: 0 16px;
-  margin: 0px 0px 16px 0px;
+  padding: 0;
+  margin: 0;
 }
 .header__nav--specific-link {
   font-size: 0.9rem;
   padding: 10px;
   text-decoration: none;
   color: #E1E1E1;
+  flex-grow: 1;
+  text-align: center;
 }
 .header__nav--specific-link:hover {
   color: #FFFFFF;
@@ -83,7 +85,7 @@ body {
 }
 .header__hero--img {
   width: 100vw;
-  height: 200px;
+  height: 240px;
   z-index: 1;
   background-image: url(../assets/Images/hero-shows.jpg);
   background-size: cover;
@@ -96,14 +98,23 @@ body {
     background-position: center;
   }
 }
+.header__hero--album {
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  z-index: 9;
+  top: 6px;
+  left: 16px;
+  position: absolute;
+}
 .header__hero--text {
   color: #FFFFFF;
   z-index: 9;
   position: absolute;
-  top: 70px;
+  top: 26px;
   left: 16px;
   font-size: 24px;
-  font-weight: 700;
+  font-family: "Avenir Next Demi";
+  width: 64%;
 }
 @media screen and (min-width: 768px) {
   .header__hero--text {
@@ -118,6 +129,28 @@ body {
     padding: 0 80px;
     font-size: 4.25rem;
   }
+}
+.header__hero--overlay {
+  background-color: #323232;
+  opacity: 50%;
+  width: 100vw;
+  height: 240px;
+  position: absolute;
+}
+@media screen and (min-width: 768px) {
+  .header__hero--overlay {
+    height: 70vh;
+  }
+}
+.header__hero--soundcloud {
+  position: absolute;
+  top: 118px;
+  padding-left: 16px;
+}
+
+.shows {
+  padding: 16px;
+  font-family: "Avenir Next Demi";
 }
 
 .footer {

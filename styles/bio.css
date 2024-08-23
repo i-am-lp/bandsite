@@ -308,7 +308,6 @@ body {
 }
 .main__comments {
   padding: 16px;
-  position: relative;
 }
 @media screen and (min-width: 768px) {
   .main__comments {
@@ -323,14 +322,14 @@ body {
 }
 @media screen and (min-width: 768px) {
   .main__comments--header {
-    padding-top: 36px;
+    padding: 36px;
     font-size: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .main__comments--header {
     font-size: 2.5rem;
-    padding: 48px 48px 0 48px;
+    padding: 48px;
   }
 }
 .main__comments--image {
@@ -346,16 +345,16 @@ body {
   .main__comments--image {
     height: 48px;
     width: 48px;
-    top: 124px;
-    left: 76px;
+    top: 12px;
+    left: 14px;
   }
 }
 @media screen and (min-width: 1280px) {
   .main__comments--image {
     height: 48px;
     width: 48px;
-    top: 155px;
-    left: 380px;
+    top: 12px;
+    left: 14px;
   }
 }
 .main__comments--form {
@@ -363,12 +362,28 @@ body {
 }
 @media screen and (min-width: 768px) {
   .main__comments--form {
-    padding: 36px 72px 0 55px;
+    width: 460px;
+    margin: auto;
   }
 }
 @media screen and (min-width: 1280px) {
   .main__comments--form {
     width: 560px;
+    margin: auto;
+  }
+}
+.main__comments--form--box {
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .main__comments--form--box {
+    width: 600px;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main__comments--form--box {
+    width: 700px;
     margin: auto;
   }
 }
@@ -433,13 +448,18 @@ body {
 }
 @media screen and (min-width: 768px) {
   .main__comments__filled {
-    margin: 24px 96px;
+    width: 500px;
+    margin: auto;
+    padding-top: 8px;
+    padding-bottom: 32px;
   }
 }
 @media screen and (min-width: 1280px) {
   .main__comments__filled {
     width: 600px;
     margin: auto;
+    padding-top: 8px;
+    padding-bottom: 32px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -458,15 +478,20 @@ body {
 .main__comments__filled--text {
   margin-left: 48px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-between;
   font-size: 0.75rem;
-  align-items: flex-end;
+  height: 124px;
 }
 @media screen and (min-width: 1280px) {
   .main__comments__filled--text {
     font-size: 1.1rem;
   }
+}
+.main__comments__filled--text--name-date {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 .main__comments__filled--text--name {
   font-family: "Avenir Next Demi";
@@ -490,6 +515,12 @@ input, textarea {
   width: 92%;
   resize: none;
   font-family: "Avenir Next Regular";
+}
+@media screen and (min-width: 768px) {
+  input, textarea {
+    width: 460px;
+    margin: auto;
+  }
 }
 @media screen and (min-width: 1280px) {
   input, textarea {

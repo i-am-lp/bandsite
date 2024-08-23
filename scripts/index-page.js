@@ -21,15 +21,20 @@ function createCommentSection(comment) {
     const textEl = document.createElement('div');
     textEl.classList.add('main__comments__filled--text');
 
+    const nameDateEl = document.createElement('div');
+    nameDateEl.classList.add('main__comments__filled--text--name-date');
+    
     const heading = document.createElement('p');
     heading.classList.add('main__comments__filled--text--name');
     heading.innerText = comment.name;
-    textEl.appendChild(heading);
-
+    
     const dateEl = document.createElement('span');
     dateEl.classList.add('main__comments__filled--text--date');
     dateEl.innerText = comment.date;
-    textEl.appendChild(dateEl);
+    
+    nameDateEl.appendChild(heading);
+    nameDateEl.appendChild(dateEl);
+    textEl.appendChild(nameDateEl);
 
     const commentEl = document.createElement('p');
     commentEl.classList.add('main__comments__filled--text--copy');
@@ -42,7 +47,7 @@ function createCommentSection(comment) {
 }
 
 function renderComment() {
-    const myCommentEl = document.querySelector("#my-comments");
+    const myCommentEl = document.querySelector("#main__comments__filled--blank");
 
     myCommentEl.innerHTML = "";
 
