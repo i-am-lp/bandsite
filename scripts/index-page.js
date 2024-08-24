@@ -73,8 +73,10 @@ function handleFormSubmit(event) {
         filledComment: formSubmission.comments,
     };
 
+    
     comments.unshift(cardData); 
     renderComment();
+    event.target.reset();
 }
 
 const formEl = document.querySelector('#main__comments--form');

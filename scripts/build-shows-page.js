@@ -7,16 +7,18 @@ const shows = [
     { date: 'Wed Dec 18 2024', venue: "Press Club", location:"San Francisco, CA"}
 ];
 
+// const showsJs = document.querySelector('#shows-js');
+// const heading = document.createElement('h2');
+// heading.classList.add('shows__title');
+// heading.textContent = 'Shows';
+// showsJs.appendChild(heading);
+
 function createShowsPage(shows) {
     const showEl = document.createElement('div');
     showEl.classList.add('shows__total');
 
-    const heading = document.createElement('h2');
-    heading.classList.add('shows');
-    heading.textContent = 'Shows';
-
     const titleDate = document.createElement('p');
-    titleDate.classList.add('shows__total--title--date');
+    titleDate.classList.add('shows__total--title');
     titleDate.textContent = 'DATE';
     showEl.appendChild(titleDate);
 
@@ -26,7 +28,7 @@ function createShowsPage(shows) {
     showEl.appendChild(dateEl);
 
     const titleVenue = document.createElement('p');
-    titleVenue.classList.add('shows__total--title--venue');
+    titleVenue.classList.add('shows__total--title');
     titleVenue.textContent = 'VENUE';
     showEl.appendChild(titleVenue);
 
@@ -36,12 +38,12 @@ function createShowsPage(shows) {
     showEl.appendChild(venueEl);
 
     const titleLocation = document.createElement('p');
-    titleLocation.classList.add('shows__total--title--location');
+    titleLocation.classList.add('shows__total--title');
     titleLocation.textContent = 'LOCATION';
     showEl.appendChild(titleLocation);
 
     const locationEl = document.createElement('p');
-    locationEl.classList.add('shows__total--lecation');
+    locationEl.classList.add('shows__total--location');
     locationEl.textContent = shows.location;
     showEl.appendChild(locationEl);
 
