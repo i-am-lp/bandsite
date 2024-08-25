@@ -78,7 +78,7 @@ body {
         &--specific-link {
             font-size: .9rem;
             padding: 10px;
-            text-decoration: none;
+            text-decoration: none !important;
             color:$mercury;
             flex-grow: 1;
             text-align: center;

@@ -253,7 +253,7 @@ body {
   .shows-js {
     position: absolute;
     right: 80px;
-    top: 70px;
+    top: 75px;
   }
 }
 .shows__title {
@@ -289,6 +289,12 @@ body {
   .shows__total {
     width: 60vw;
   }
+}
+.shows__total:hover {
+  background-color: #FAFAFA;
+}
+.shows__total:active {
+  background-color: #E1E1E1;
 }
 .shows__total--title {
   font-size: 0.85rem;

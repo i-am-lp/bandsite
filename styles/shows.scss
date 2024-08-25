@@ -285,7 +285,7 @@ main {
         @include desktop {
             position: absolute;
             right: 80px;
-            top: 70px;
+            top: 75px;
             
         }
     }
@@ -319,6 +319,14 @@ main {
 
         @include desktop {
             width: 60vw;
+        }
+
+        &:hover {
+            background-color: $alabaster;
+        }
+
+        &:active {
+            background-color: $mercury;
         }
         
         &--title {
