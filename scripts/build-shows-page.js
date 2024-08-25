@@ -13,7 +13,45 @@ const shows = [
 // heading.textContent = 'Shows';
 // showsJs.appendChild(heading);
 
-function createShowsPage(shows) {
+function createHeaders() {
+    const showsJs = document.querySelector('#headings-js');
+    const heading = document.createElement('h2');
+    heading.classList.add('shows__title');
+    heading.textContent = 'Shows';
+    showsJs.appendChild(heading);
+
+    const headingsParent = document.createElement('div');
+    headingsParent.classList.add('headings-parent');
+
+    const headingsNonMobileDate = document.createElement('div');
+    headingsNonMobileDate.classList.add('headings-non-mobile');
+    headingsNonMobileDate.innerText = 'DATE';
+    headingsParent.appendChild(headingsNonMobileDate);
+
+    const headingsNonMobileVenue = document.createElement('div');
+    headingsNonMobileVenue.classList.add('headings-non-mobile');
+    headingsNonMobileVenue.innerText = 'VENUE';
+    headingsParent.appendChild(headingsNonMobileVenue);
+
+    const headingsNonMobileLocation = document.createElement('div');
+    headingsNonMobileLocation.classList.add('headings-non-mobile');
+    headingsNonMobileLocation.innerText = 'DATE';
+    headingsParent.appendChild(headingsNonMobileLocation);
+
+    return headingsParent;
+}
+
+const headers = createHeaders();
+const showsJs = document.querySelector('#headings-js');
+
+if (showsJs) {
+    showsJs.appendChild(headers);
+    console.log('Headers appended successfully');
+} else {
+    console.error("Element with ID 'shows-js' not found in the DOM.");
+}
+
+function createShowsPage(show) {
     const showEl = document.createElement('div');
     showEl.classList.add('shows__total');
 
@@ -24,17 +62,18 @@ function createShowsPage(shows) {
 
     const dateEl = document.createElement('p');
     dateEl.classList.add('shows__total--date');
-    dateEl.textContent = shows.date;
+    dateEl.textContent = show.date;
     showEl.appendChild(dateEl);
 
     const titleVenue = document.createElement('p');
     titleVenue.classList.add('shows__total--title');
     titleVenue.textContent = 'VENUE';
     showEl.appendChild(titleVenue);
+    
 
     const venueEl = document.createElement('p');
     venueEl.classList.add('shows__total--venue');
-    venueEl.textContent = shows.venue;
+    venueEl.textContent = show.venue;
     showEl.appendChild(venueEl);
 
     const titleLocation = document.createElement('p');
@@ -44,7 +83,7 @@ function createShowsPage(shows) {
 
     const locationEl = document.createElement('p');
     locationEl.classList.add('shows__total--location');
-    locationEl.textContent = shows.location;
+    locationEl.textContent = show.location;
     showEl.appendChild(locationEl);
 
     const button = document.createElement('button');
