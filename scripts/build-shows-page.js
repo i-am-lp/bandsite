@@ -113,15 +113,3 @@ function renderShows() {
 const showCardEl = document.querySelector('#shows-js');
 renderShows();
 
-// const showButton = document.querySelectorAll('.shows__total--button');
-// const showLine = document.querySelectorAll('.shows__total');
-
-// showStyling.forEach( (showButton) => {
-//     showButton.addEventListener('click', function() {
-//         showLine.classList.add('show__total--active');
-//     });
-
-//     showButton.addEventListener('blur', function() {
-//         showLine.classList.remove('show__total--active');
-//     });
-// })
