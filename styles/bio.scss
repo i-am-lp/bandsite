@@ -25,7 +25,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Avenir Next Regular';
+    font-family: 'Avenir Next', Arial, sans-serif;
 }
 
 .header {
@@ -162,6 +162,7 @@ body {
         padding: 24px 16px 16px 16px;
         margin: 0;
         font-size: 24px;
+        
 
         @include tablet {
             font-size: 2.75rem;
@@ -171,6 +172,7 @@ body {
 
         @include desktop {
             padding: 48px 80px 0 80px;
+            max-width: 1020px;
         }
 
         &--subheader {
@@ -181,6 +183,11 @@ body {
 
             @include tablet {
                 padding: 0 36px;
+            }
+
+            @include desktop {
+                max-width: 1020px;
+                margin: auto;
             }
         }
 
@@ -194,8 +201,8 @@ body {
             }
 
             @include desktop {
-                // padding: 36px 160px;
-                max-width: 75vw;
+                max-width: 1020px;
+                margin: auto;
                 
             }
 
@@ -217,10 +224,11 @@ body {
             }
 
             @include desktop {
-                padding: 16px 160px;
+                padding: 0;
                 font-size: 1.55rem;
                 font-family: "Avenir Next Demi";
-                max-width: 60%;
+                max-width: 745px;
+                
             }
 
 
@@ -249,6 +257,9 @@ body {
             @include tablet {
                 display: flex;
                 font-size: 14px;
+                max-width: 1020px;
+                margin: auto;
+                padding: 0;
             }
 
         }
@@ -264,6 +275,7 @@ body {
 
             @include desktop {
                 font-size: 1.1rem;
+                
             }
 
             &--bold {
@@ -278,6 +290,8 @@ body {
                 @include desktop {
                     font-size: 2rem;
                     font-family: 'Avenir Next Demi';
+                    max-width: 1020px;
+                    margin: auto;
                 }
             }
         }
@@ -312,7 +326,7 @@ body {
 
             @include desktop {
                 display: grid;
-                grid-template-columns: repeat(3, 420px);
+                grid-template-columns: repeat(3, 320px);
                 grid-gap: 24px;
                 justify-content: center;
             }
