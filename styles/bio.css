@@ -60,14 +60,17 @@ body {
   align-items: center;
   list-style: none;
   text-decoration: none;
-  padding: 0 16px;
-  margin: 0px 0px 16px 0px;
+  padding: 0;
+  margin: 0;
 }
 .header__nav--specific-link {
   font-size: 0.9rem;
   padding: 10px;
   text-decoration: none;
   color: #E1E1E1;
+  flex-grow: 1;
+  text-align: center;
+  padding-bottom: 20px;
 }
 .header__nav--specific-link:hover {
   color: #FFFFFF;
@@ -405,11 +408,18 @@ body {
   border: 1px solid rgba(175, 175, 175, 0.5);
   margin-top: 8px;
   margin-bottom: 16px;
+  outline: none;
 }
 @media screen and (min-width: 1280px) {
   .main__comments--form--placeholder {
     font-size: 1.1rem;
   }
+}
+.main__comments--form--placeholder--active {
+  border: 1px solid #323232;
+}
+.main__comments--form--placeholder--error {
+  border: 1px solid #D22D2D;
 }
 .main__comments--form--placeholder--comment {
   height: 80px;

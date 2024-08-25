@@ -59,26 +59,55 @@ function renderComment() {
 
 function handleFormSubmit(event) {
     event.preventDefault();
+
+    const nameVal = event.target.elements.name.value;
+    const commentVal = event.target.elements.comments.value;
+    const nameValFilled = document.getElementById('name');
+    const commentValFilled = document.getElementById('comments');
+
+    let hasError=false;
+
+    if (nameVal === '') {
+        nameValFilled.classList.add('main__comments--form--placeholder--error');
+        hasError = true;
+    } else {
+        nameValFilled.classList.remove('main__comments--form--placeholder--error');
+    }
+
+    if (commentVal === '') {
+        commentValFilled.classList.add('main__comments--form--placeholder--error');
+        hasError = true;
+    } else {
+        commentValFilled.classList.remove('main__comments--form--placeholder--error');
+    }
     
-    const formSubmission = {
-        name: event.target.name.value,
-        comments: event.target.comments.value,
-    };
+    if (!hasError) {
+        const currentDate = new Date().toLocaleDateString();
 
-    const currentDate = new Date().toLocaleDateString();
-
-    const cardData = {
-        name: formSubmission.name,
+        const cardData = {
+        name: nameVal,
         date: currentDate,
-        filledComment: formSubmission.comments,
-    };
-
-    
+        filledComment: commentVal,
+    }
     comments.unshift(cardData); 
     renderComment();
     event.target.reset();
+    };
 }
 
 const formEl = document.querySelector('#main__comments--form');
 formEl.addEventListener('submit', handleFormSubmit);
 renderComment();
+
+const nameStyling = document.querySelectorAll('.main__comments--form--placeholder');
+
+nameStyling.forEach( (nameComment) => {
+    nameComment.addEventListener('click', function() {
+        nameComment.classList.add('main__comments--form--placeholder--active');
+    });
+
+    nameComment.addEventListener('blur', function() {
+        nameComment.classList.remove('main__comments--form--placeholder--active');
+    });
+});
+
