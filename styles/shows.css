@@ -290,11 +290,11 @@ body {
     width: 60vw;
   }
 }
+.shows__total--clicked {
+  background-color: #E1E1E1;
+}
 .shows__total:hover {
   background-color: #FAFAFA;
-}
-.shows__total:active {
-  background-color: #E1E1E1;
 }
 .shows__total--title {
   font-size: 0.85rem;

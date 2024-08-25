@@ -321,13 +321,15 @@ main {
             width: 60vw;
         }
 
+
+        &--clicked {
+            background-color: $mercury;
+        }
+
         &:hover {
             background-color: $alabaster;
         }
 
-        &:active {
-            background-color: $mercury;
-        }
         
         &--title {
             font-size: .85rem;

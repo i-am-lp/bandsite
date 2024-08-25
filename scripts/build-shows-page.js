@@ -89,10 +89,13 @@ function createShowsPage(show) {
     const button = document.createElement('button');
     button.classList.add('shows__total--button');
     button.textContent = 'BUY TICKETS';
-    // button.addEventListener('click', function() {
-    //     button.parentElement.classList.add('shows__total--clicked');
+    button.addEventListener('click', function() {
+        button.parentElement.classList.add('shows__total--clicked');
         
-    // });
+    });
+    button.addEventListener('blur', function() {
+        button.parentElement.classList.remove('shows__total--clicked');
+    })
 
     showEl.appendChild(button);
 
