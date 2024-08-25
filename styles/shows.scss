@@ -111,8 +111,10 @@ body {
 
             @include tablet {
                 height:70vh;
-                background-size: cover;
-                background-position: center;
+            }
+
+            @include desktop {
+                height:80vh;
             }
         }
 
@@ -129,6 +131,12 @@ body {
                 top: 36px;
                 left: 36px;
             }
+
+            @include desktop {
+                font-size: 1.5rem;
+                left: 77px;
+                top: 180px;
+            }
         }
 
         &--text {
@@ -139,18 +147,21 @@ body {
             left: 16px;
             font-size: 24px;
             font-family: 'Avenir Next Demi';
-            width: 64%;
+            max-width: 240px;
 
             @include tablet {
                 font-size: 3.5rem;
                 left: 36px;
                 top: 36px;
                 font-family: 'Avenir Next Demi';
+                max-width: 500px;
             }
 
             @include desktop {
-                padding: 0 80px;
-                font-size: 4.25rem;
+                padding: 0 36px;
+                font-size: 4.5rem;
+                max-width: 600px;
+                top: 174px;
             }
         }
 
@@ -164,16 +175,31 @@ body {
             @include tablet {
                 height: 70vh;
             }
+
+            @include desktop {
+                height:80vh;
+            }
         }
 
         &--soundcloud {
             position: absolute;
             top: 118px;
             left: 16px;
+            width: 280px;
+            height: 100px;
+
 
             @include tablet {
                 top: 255px;
                 left: 36px;
+                width: 50%;
+                height: 150px;
+            }
+
+            @include desktop {
+                top: 255px;
+                left: 700px;
+                width: 40%;
             }
         }
     }
@@ -214,12 +240,54 @@ body {
     }
 }
 
+@include desktop {
+    .headings {
+        position: relative;
+
+        &-js {
+            position: relative;
+        }
+
+        &-parent {
+            display: flex;
+            justify-content: space-between;
+            margin: 56px 32px 32px 400px;
+            width: 40%;
+            position: absolute;
+            left: 70px
+        }
+    
+        &-non-mobile {
+            font-size: 1.1rem;
+            color: $mercury;
+            font-family: 'Avenir Next Demi';
+        }
+        
+    }
+}
+
+main {
+    @include desktop {
+        position: relative;
+        height: 650px;
+    }
+}
+
 
 .shows {
     padding: 16px;
     margin: 0;
     font-family: 'Avenir Next Demi';
     font-size: 1.75rem;
+
+    &-js {
+        @include desktop {
+            position: absolute;
+            right: 80px;
+            top: 70px;
+            
+        }
+    }
 
     &__title {
         padding: 16px;
@@ -228,6 +296,11 @@ body {
             padding: 18px;
             font-family: 'Avenir Next Demi';
             font-size: 2rem;
+        }
+
+        @include desktop {
+            position: absolute;
+            left: 150px;
         }
     }
 
@@ -241,6 +314,10 @@ body {
             display: flex;
             justify-content: space-between;
             padding: 24px 18px;
+        }
+
+        @include desktop {
+            width: 60vw;
         }
         
         &--title {

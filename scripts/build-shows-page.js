@@ -35,7 +35,7 @@ function createHeaders() {
 
     const headingsNonMobileLocation = document.createElement('div');
     headingsNonMobileLocation.classList.add('headings-non-mobile');
-    headingsNonMobileLocation.innerText = 'DATE';
+    headingsNonMobileLocation.innerText = 'LOCATION';
     headingsParent.appendChild(headingsNonMobileLocation);
 
     return headingsParent;
