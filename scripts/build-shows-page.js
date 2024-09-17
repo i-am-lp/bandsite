@@ -7,11 +7,6 @@ const shows = [
     { date: 'Wed Dec 18 2024', venue: "Press Club", location:"San Francisco, CA"}
 ];
 
-// const showsJs = document.querySelector('#shows-js');
-// const heading = document.createElement('h2');
-// heading.classList.add('shows__title');
-// heading.textContent = 'Shows';
-// showsJs.appendChild(heading);
 
 function createHeaders() {
     const showsJs = document.querySelector('#headings-js');
