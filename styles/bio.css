@@ -451,14 +451,12 @@ body {
   .main__comments--form--button {
     width: 150px;
     padding: 0 32px;
-    float: right;
     margin-top: 16px;
     margin-right: 24px;
   }
 }
 @media screen and (min-width: 1280px) {
   .main__comments--form--button {
-    float: right;
     margin-right: 0;
   }
 }
