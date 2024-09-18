@@ -1,18 +1,11 @@
-const comments = [
-    { name: 'Victor Pinto', date: "11/02/2023", filledComment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."},
-    { name: 'Christina Cabrera', date: "10/28/2023", filledComment:"I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day." },
-    { name: 'Isaac Tadesse', date: "10/20/2023", filledComment:"I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."}
-];
+import BandSiteApi from './band-site-api.js';
+
+const apiKey = 'feb0356e-ecdf-49d8-a7bf-d83e8ae70888';
+const bandSiteApi = new BandSiteApi(apiKey);
 
 function createCommentSection(comment) {
     const cardEl = document.createElement('div');
     cardEl.classList.add('main__comments__filled');
-
-    if (comments.indexOf(comment) === 0) {
-        cardEl.classList.add('main__comments__filled--first');
-    } else if (comments.indexOf(comment) === comments.length - 1) {
-        cardEl.classList.add('main__comments__filled--last');
-    }
 
     const imageEl = document.createElement('div');
     imageEl.classList.add('main__comments__filled--image');
@@ -23,22 +16,23 @@ function createCommentSection(comment) {
 
     const nameDateEl = document.createElement('div');
     nameDateEl.classList.add('main__comments__filled--text--name-date');
-    
+
     const heading = document.createElement('p');
     heading.classList.add('main__comments__filled--text--name');
     heading.innerText = comment.name;
-    
+
     const dateEl = document.createElement('span');
     dateEl.classList.add('main__comments__filled--text--date');
-    dateEl.innerText = comment.date;
-    
+    const formattedDate = new Date(comment.timestamp).toLocaleDateString();
+    dateEl.innerText = formattedDate;
+
     nameDateEl.appendChild(heading);
     nameDateEl.appendChild(dateEl);
     textEl.appendChild(nameDateEl);
 
     const commentEl = document.createElement('p');
     commentEl.classList.add('main__comments__filled--text--copy');
-    commentEl.innerText = comment.filledComment;
+    commentEl.innerText = comment.comment;
     textEl.appendChild(commentEl);
 
     cardEl.appendChild(textEl);
@@ -46,68 +40,68 @@ function createCommentSection(comment) {
     return cardEl;
 }
 
-function renderComment() {
+async function renderComment() {
     const myCommentEl = document.querySelector("#main__comments__filled--blank");
 
     myCommentEl.innerHTML = "";
 
-    for (let i = 0; i < comments.length; i++) {
-        const card = createCommentSection(comments[i]);
-        myCommentEl.appendChild(card);
+    try {
+        const comments = await bandSiteApi.getComments();
+
+        comments.forEach(comment => {
+            const card = createCommentSection(comment);
+            myCommentEl.appendChild(card);
+        });
+    } catch (error) {
+        console.error('Failed to load comments:', error);
     }
 }
 
-function handleFormSubmit(event) {
-    event.preventDefault();
-
+async function handleFormSubmit(event) {
+    event.preventDefault(); 
+    
     const nameVal = event.target.elements.name.value;
     const commentVal = event.target.elements.comments.value;
-    const nameValFilled = document.getElementById('name');
-    const commentValFilled = document.getElementById('comments');
 
-    let hasError=false;
 
+    let hasError = false;
     if (nameVal === '') {
-        nameValFilled.classList.add('main__comments--form--placeholder--error');
         hasError = true;
-    } else {
-        nameValFilled.classList.remove('main__comments--form--placeholder--error');
     }
-
     if (commentVal === '') {
-        commentValFilled.classList.add('main__comments--form--placeholder--error');
         hasError = true;
-    } else {
-        commentValFilled.classList.remove('main__comments--form--placeholder--error');
     }
-    
-    if (!hasError) {
-        const currentDate = new Date().toLocaleDateString();
 
-        const cardData = {
-        name: nameVal,
-        date: currentDate,
-        filledComment: commentVal,
+    if (!hasError) {
+        const commentData = {
+            name: nameVal,
+            comment: commentVal
+        };
+
+        try {
+            await bandSiteApi.postComment(commentData); 
+            renderComment(); 
+            event.target.reset(); 
+        } catch (error) {
+            console.error('Failed to submit comment:', error);
+        }
     }
-    comments.unshift(cardData); 
-    renderComment();
-    event.target.reset();
-    };
 }
 
 const formEl = document.querySelector('#main__comments--form');
 formEl.addEventListener('submit', handleFormSubmit);
 renderComment();
 
-const nameStyling = document.querySelectorAll('.main__comments--form--placeholder');
 
-nameStyling.forEach( (nameComment) => {
-    nameComment.addEventListener('click', function() {
-        nameComment.classList.add('main__comments--form--placeholder--active');
-    });
+// const nameStyling = document.querySelectorAll('.main__comments--form--placeholder');
 
-    nameComment.addEventListener('blur', function() {
-        nameComment.classList.remove('main__comments--form--placeholder--active');
-    });
-});
+// nameStyling.forEach( (nameComment) => {
+//     nameComment.addEventListener('click', function() {
+//         nameComment.classList.add('main__comments--form--placeholder--active');
+//     });
+
+//     nameComment.addEventListener('blur', function() {
+//         nameComment.classList.remove('main__comments--form--placeholder--active');
+//     });
+// });
 

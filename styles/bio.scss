@@ -474,13 +474,11 @@ body {
                 @include tablet {
                     width: 150px;
                     padding: 0 32px;
-                    float: right;
                     margin-top: 16px;
                     margin-right: 24px;
                 }
 
                 @include desktop {
-                    float: right;
                     margin-right: 0;
                 }
 

@@ -1,47 +1,37 @@
-class BandSiteApi {
+export default class BandSiteApi {
     constructor(apiKey) {
-        this.apiKey = apiKey;
-        this.baseUrl = 'https://unit-2-project-api-25c1595833b2.herokuapp.com/';
-    }
-};
-
-async function getComments () {
-    try {
-        const comments = await axios.get('https://unit-2-project-api-25c1595833b2.herokuapp.com/comments?api_key=feb0356e-ecdf-49d8-a7bf-d83e8ae70888')
-        
-        console.log(comments);
+      this.apiKey = apiKey;
+      this.baseUrl = 'https://unit-2-project-api-25c1595833b2.herokuapp.com';
     }
 
-    catch (e) {
-        const errMsg = e.message;
-        alert(errMsg);
+    async postComment(comment) {
+        try {
+            const response = await fetch(`${this.baseUrl}/comments?api_key=${this.apiKey}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(comment)
+            });
+            if (!response.ok) {
+                throw new Error('Failed to post comment');
+            }
+            return await response.json();
+        } catch (error) {
+            console.error(error);
+        }
     }
-}
-
-getComments();
-
-
-
-
-
-// async function postComment(comment) {
-//     try {
-//     const response = await axios.post(
-//         `${this.baseUrl}/comments`, // Adjust endpoint as needed
-//         comment,
-//         {
-//             headers: {
-//                 'Authorization': `Bearer ${this.apiKey}`,
-//                 'Content-Type': 'application/json'
-//             }
-//         }
-//     );
-//     return response.data;
-// } 
-// catch (error) {
-//     console.error('Error posting comment:', error);
-//     throw error;
-// }
-// }
-
-
+  
+    async getComments() {
+      const response = await fetch(`${this.baseUrl}/comments?api_key=${this.apiKey}`);
+      const data = await response.json();
+      return data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+    }
+  
+    async getShows() {
+      const response = await fetch(`${this.baseUrl}/shows?api_key=${this.apiKey}`);
+      const data = await response.json();
+      return data;
+    }
+  }
+  
