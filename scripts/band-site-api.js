@@ -17,21 +17,32 @@ export default class BandSiteApi {
                 throw new Error('Failed to post comment');
             }
             return await response.json();
-        } catch (error) {
+        } 
+        catch (error) {
             console.error(error);
         }
     }
   
     async getComments() {
-      const response = await fetch(`${this.baseUrl}/comments?api_key=${this.apiKey}`);
-      const data = await response.json();
-      return data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+        try {
+            const response = await fetch(`${this.baseUrl}/comments?api_key=${this.apiKey}`);
+            const data = await response.json();
+            return data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+        }
+        catch (error) {
+            console.error(error);
+        }
     }
   
     async getShows() {
-      const response = await fetch(`${this.baseUrl}/shows?api_key=${this.apiKey}`);
-      const data = await response.json();
-      return data;
+        try {
+            const response = await fetch(`${this.baseUrl}/showdates?api_key=${this.apiKey}`);
+            const data = await response.json();
+            return data;
+        }
+        catch (error) {
+            console.error(error);
+        }
     }
-  }
+}
   

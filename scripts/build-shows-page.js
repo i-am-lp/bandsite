@@ -1,12 +1,16 @@
-const shows = [
-    { date: 'Mon Sept 09 2024', venue: "Ronald Lane", location: "San Francisco, CA"},
-    { date: 'Tue Sept 17 2024', venue: "Pier 3 East", location:"San Francisco, CA" },
-    { date: 'Sat Oct 12 2024', venue: "View Lounge", location:"San Francisco, CA"},
-    { date: 'Sat Nov 16 2024', venue: "Hyatt Agency", location:"San Francisco, CA"},
-    { date: 'Fri Nov 29 2024', venue: "Moscow Center", location:"San Francisco, CA"},
-    { date: 'Wed Dec 18 2024', venue: "Press Club", location:"San Francisco, CA"}
-];
+// const shows = [
+//     { date: 'Mon Sept 09 2024', venue: "Ronald Lane", location: "San Francisco, CA"},
+//     { date: 'Tue Sept 17 2024', venue: "Pier 3 East", location:"San Francisco, CA" },
+//     { date: 'Sat Oct 12 2024', venue: "View Lounge", location:"San Francisco, CA"},
+//     { date: 'Sat Nov 16 2024', venue: "Hyatt Agency", location:"San Francisco, CA"},
+//     { date: 'Fri Nov 29 2024', venue: "Moscow Center", location:"San Francisco, CA"},
+//     { date: 'Wed Dec 18 2024', venue: "Press Club", location:"San Francisco, CA"}
+// ];
 
+import BandSiteApi from './band-site-api.js';
+
+const apiKey = 'feb0356e-ecdf-49d8-a7bf-d83e8ae70888';
+const bandSiteApi = new BandSiteApi(apiKey);
 
 function createHeaders() {
     const showsJs = document.querySelector('#headings-js');
@@ -38,13 +42,9 @@ function createHeaders() {
 
 const headers = createHeaders();
 const showsJs = document.querySelector('#headings-js');
+showsJs.appendChild(headers);
 
-if (showsJs) {
-    showsJs.appendChild(headers);
-    console.log('Headers appended successfully');
-} else {
-    console.error("Element with ID 'shows-js' not found in the DOM.");
-}
+
 
 function createShowsPage(show) {
     const showEl = document.createElement('div');
@@ -68,7 +68,7 @@ function createShowsPage(show) {
 
     const venueEl = document.createElement('p');
     venueEl.classList.add('shows__total--venue');
-    venueEl.textContent = show.venue;
+    venueEl.textContent = show.place;
     showEl.appendChild(venueEl);
 
     const titleLocation = document.createElement('p');
@@ -97,14 +97,20 @@ function createShowsPage(show) {
     return showEl;
 }
 
-function renderShows() {
+async function renderShows() {
     const buildShowsEl = document.querySelector('#shows-js');
 
     buildShowsEl.innerHTML="";
 
-    for (let i=0; i < shows.length; i++) {
-        const card = createShowsPage(shows[i]);
-        buildShowsEl.appendChild(card);
+    try {
+        const showpage = await bandSiteApi.getShows();
+
+        showpage.forEach(show => {
+            const showCard = createShowsPage(show);
+            buildShowsEl.appendChild(showCard);
+        });
+    } catch (error) {
+        console.error('Failed to load shows:', error);
     }
 }
 
