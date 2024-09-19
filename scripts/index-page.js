@@ -93,15 +93,15 @@ formEl.addEventListener('submit', handleFormSubmit);
 renderComment();
 
 
-// const nameStyling = document.querySelectorAll('.main__comments--form--placeholder');
+const nameStyling = document.querySelectorAll('.main__comments--form--placeholder');
 
-// nameStyling.forEach( (nameComment) => {
-//     nameComment.addEventListener('click', function() {
-//         nameComment.classList.add('main__comments--form--placeholder--active');
-//     });
+nameStyling.forEach( (nameComment) => {
+    nameComment.addEventListener('click', function() {
+        nameComment.classList.add('main__comments--form--placeholder--active');
+    });
 
-//     nameComment.addEventListener('blur', function() {
-//         nameComment.classList.remove('main__comments--form--placeholder--active');
-//     });
-// });
+    nameComment.addEventListener('blur', function() {
+        nameComment.classList.remove('main__comments--form--placeholder--active');
+    });
+});
 
