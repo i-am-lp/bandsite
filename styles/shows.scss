@@ -91,7 +91,7 @@ body {
 
             &--shows {
                 border-bottom: 3px solid $white;
-                font-family: 'Avenir Next Bold';
+                font-family: 'Avenir Next Bold', Arial, Helvetica, sans-serif;;
                 color: $white;
             }
 
@@ -147,14 +147,14 @@ body {
             top: 26px;
             left: 16px;
             font-size: 24px;
-            font-family: 'Avenir Next Demi';
+            font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
             max-width: 240px;
 
             @include tablet {
                 font-size: 3.5rem;
                 left: 36px;
                 top: 36px;
-                font-family: 'Avenir Next Demi';
+                font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
                 max-width: 500px;
             }
 
@@ -235,7 +235,7 @@ body {
         &-non-mobile {
             font-size: .85rem;
             color: $mercury;
-            font-family: 'Avenir Next Demi';
+            font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
         }
         
     }
@@ -261,7 +261,7 @@ body {
         &-non-mobile {
             font-size: 1.1rem;
             color: $mercury;
-            font-family: 'Avenir Next Demi';
+            font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
         }
         
     }
@@ -278,7 +278,7 @@ main {
 .shows {
     padding: 16px;
     margin: 0;
-    font-family: 'Avenir Next Demi';
+    font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
     font-size: 1.75rem;
 
     &-js {
@@ -295,7 +295,7 @@ main {
 
         @include tablet {
             padding: 18px;
-            font-family: 'Avenir Next Demi';
+            font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
             font-size: 2rem;
         }
 
@@ -334,7 +334,7 @@ main {
         &--title {
             font-size: .85rem;
             color: $mercury;
-            font-family: 'Avenir Next Demi';
+            font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
 
             @include tablet {
                 display: none;
@@ -347,7 +347,7 @@ main {
 
         &--date {
             font-size: .85rem;
-            font-family: 'Avenir Next Demi';
+            font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
 
             @include tablet {
                 width: 124px;
@@ -377,7 +377,7 @@ main {
             border: 1px solid $bandsite-black;
             width: 100%;
             height: 40px;
-            font-family: 'Avenir Next Demi';
+            font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
             font-size: 1rem;
 
             @include tablet {
@@ -433,7 +433,7 @@ main {
 
         @include tablet {
             width: 15%;
-            font-family: 'Avenir Next Demi';
+            font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
             padding: 0;
         }
     }
@@ -452,7 +452,7 @@ main {
         font-weight: 600;
 
         @include tablet {
-            font-family: 'Avenir Next Demi';
+            font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
             font-size: .9rem;
         }
     }

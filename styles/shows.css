@@ -78,7 +78,7 @@ body {
 }
 .header__nav--specific-link--shows {
   border-bottom: 3px solid #FFFFFF;
-  font-family: "Avenir Next Bold";
+  font-family: "Avenir Next Bold", Arial, Helvetica, sans-serif;
   color: #FFFFFF;
 }
 .header__hero {
@@ -131,7 +131,7 @@ body {
   top: 26px;
   left: 16px;
   font-size: 24px;
-  font-family: "Avenir Next Demi";
+  font-family: "Avenir Next Demi", Arial, Helvetica, sans-serif;
   max-width: 240px;
 }
 @media screen and (min-width: 768px) {
@@ -139,7 +139,7 @@ body {
     font-size: 3.5rem;
     left: 36px;
     top: 36px;
-    font-family: "Avenir Next Demi";
+    font-family: "Avenir Next Demi", Arial, Helvetica, sans-serif;
     max-width: 500px;
   }
 }
@@ -212,7 +212,7 @@ body {
   .headings-non-mobile {
     font-size: 0.85rem;
     color: #E1E1E1;
-    font-family: "Avenir Next Demi";
+    font-family: "Avenir Next Demi", Arial, Helvetica, sans-serif;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -233,7 +233,7 @@ body {
   .headings-non-mobile {
     font-size: 1.1rem;
     color: #E1E1E1;
-    font-family: "Avenir Next Demi";
+    font-family: "Avenir Next Demi", Arial, Helvetica, sans-serif;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -246,7 +246,7 @@ body {
 .shows {
   padding: 16px;
   margin: 0;
-  font-family: "Avenir Next Demi";
+  font-family: "Avenir Next Demi", Arial, Helvetica, sans-serif;
   font-size: 1.75rem;
 }
 @media screen and (min-width: 1280px) {
@@ -262,7 +262,7 @@ body {
 @media screen and (min-width: 768px) {
   .shows__title {
     padding: 18px;
-    font-family: "Avenir Next Demi";
+    font-family: "Avenir Next Demi", Arial, Helvetica, sans-serif;
     font-size: 2rem;
   }
 }
@@ -299,7 +299,7 @@ body {
 .shows__total--title {
   font-size: 0.85rem;
   color: #E1E1E1;
-  font-family: "Avenir Next Demi";
+  font-family: "Avenir Next Demi", Arial, Helvetica, sans-serif;
 }
 @media screen and (min-width: 768px) {
   .shows__total--title {
@@ -313,7 +313,7 @@ body {
 }
 .shows__total--date {
   font-size: 0.85rem;
-  font-family: "Avenir Next Demi";
+  font-family: "Avenir Next Demi", Arial, Helvetica, sans-serif;
 }
 @media screen and (min-width: 768px) {
   .shows__total--date {
@@ -343,7 +343,7 @@ body {
   border: 1px solid #323232;
   width: 100%;
   height: 40px;
-  font-family: "Avenir Next Demi";
+  font-family: "Avenir Next Demi", Arial, Helvetica, sans-serif;
   font-size: 1rem;
 }
 @media screen and (min-width: 768px) {
@@ -397,7 +397,7 @@ body {
 @media screen and (min-width: 768px) {
   .footer__socials {
     width: 15%;
-    font-family: "Avenir Next Demi";
+    font-family: "Avenir Next Demi", Arial, Helvetica, sans-serif;
     padding: 0;
   }
 }
@@ -415,7 +415,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .footer__heading {
-    font-family: "Avenir Next Demi";
+    font-family: "Avenir Next Demi", Arial, Helvetica, sans-serif;
     font-size: 0.9rem;
   }
 }

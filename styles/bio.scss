@@ -91,7 +91,7 @@ body {
 
             &--bio {
                 border-bottom: 3px solid $white;
-                font-family: 'Avenir Next Bold';
+                font-family: 'Avenir Next Bold', Arial, Helvetica, sans-serif;;
                 color: $white;
             }
 
@@ -130,7 +130,7 @@ body {
                 font-size: 3.5rem;
                 padding-left: 36px;
                 top: 150px;
-                font-family: 'Avenir Next Demi';
+                font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;; 
             }
 
             @include desktop {
@@ -167,7 +167,7 @@ body {
         @include tablet {
             font-size: 2.75rem;
             padding: 48px 36px 0px 36px;
-            font-family: 'Avenir Next Demi';
+            font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;
         }
 
         @include desktop {
@@ -220,13 +220,13 @@ body {
             @include tablet {
                 padding: 8px 36px;
                 font-size: 1.75rem;
-                font-family: 'Avenir Next Demi';
+                font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
             }
 
             @include desktop {
                 padding: 0;
                 font-size: 1.55rem;
-                font-family: "Avenir Next Demi";
+                font-family: "Avenir Next Demi", Arial, Helvetica, sans-serif;;
                 max-width: 745px;
                 
             }
@@ -235,7 +235,7 @@ body {
             &--smaller {
                 @include tablet {
                     font-size: 18px;
-                    font-family: 'Avenir Next Demi';
+                    font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
                 }
             }
         }
@@ -284,12 +284,12 @@ body {
                 @include tablet {
                     padding: 0 36px;
                     font-size: 24px;
-                    font-family: 'Avenir Next Demi';
+                    font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
                 }
 
                 @include desktop {
                     font-size: 2rem;
-                    font-family: 'Avenir Next Demi';
+                    font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
                     max-width: 1020px;
                     margin: auto;
                 }
@@ -315,7 +315,7 @@ body {
 
             @include tablet {
                 font-size: 2.5rem;
-                font-family: 'Avenir Next Demi';
+                font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
             }
         }
 
@@ -352,7 +352,7 @@ body {
         }
 
         &--header {
-            font-family: 'Avenir Next Demi';
+            font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
             padding-top: 0;
             margin: 0;
 
@@ -423,7 +423,7 @@ body {
             }
             
             &--text {
-                font-family: 'Avenir Next Demi';
+                font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
                 color: $silver;
                 font-size: .7rem;
 
@@ -539,7 +539,7 @@ body {
                 }
 
                 &--name {
-                    font-family: 'Avenir Next Demi';
+                    font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
                     padding-top: 4px;
                 }
 
@@ -565,7 +565,7 @@ input, textarea {
     padding: 8px;
     width: 92%;
     resize: none;
-    font-family: 'Avenir Next Regular';
+    font-family: 'Avenir Next Regular', Arial, Helvetica, sans-serif;;
 
     @include tablet {
         width: 460px;
@@ -623,7 +623,7 @@ p {
 
         @include tablet {
             width: 15%;
-            font-family: 'Avenir Next Demi';
+            font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
             padding: 0;
         }
     }
@@ -642,7 +642,7 @@ p {
         font-weight: 600;
 
         @include tablet {
-            font-family: 'Avenir Next Demi';
+            font-family: 'Avenir Next Demi', Arial, Helvetica, sans-serif;;
             font-size: .9rem;
         }
     }
