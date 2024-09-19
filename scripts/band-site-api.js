@@ -13,9 +13,7 @@ export default class BandSiteApi {
                 },
                 body: JSON.stringify(comment)
             });
-            if (!response.ok) {
-                throw new Error('Failed to post comment');
-            }
+
             return await response.json();
         } 
         catch (error) {
