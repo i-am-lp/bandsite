@@ -345,7 +345,6 @@ body {
 
     &__comments {
         padding: 16px;
-        // position: relative;
 
         @include tablet {
             padding: 0 36px;
@@ -430,8 +429,6 @@ body {
 
                 @include desktop {
                     font-size: 1.1rem;
-                    // margin: auto;
-                    // align-self: flex-end;
                 }
             }
 
@@ -459,10 +456,6 @@ body {
 
                 &--comment {
                     height: 80px;
-
-                    // &--active {
-                    //     border: 1px solid $bandsite-black;
-                    // }
                 }
             }
 
@@ -500,7 +493,6 @@ body {
             position: relative;
 
             @include tablet {
-                // margin: 24px 96px;
                 width: 500px;
                 margin: auto;
                 padding-top: 8px;
