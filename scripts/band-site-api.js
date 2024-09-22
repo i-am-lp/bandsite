@@ -13,7 +13,6 @@ export default class BandSiteApi {
                 },
                 body: JSON.stringify(comment)
             });
-
             return await response.json();
         } 
         catch (error) {

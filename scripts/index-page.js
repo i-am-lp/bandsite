@@ -52,7 +52,8 @@ async function renderComment() {
             const card = createCommentSection(comment);
             myCommentEl.appendChild(card);
         });
-    } catch (error) {
+    }
+    catch (error) {
         console.error('Failed to load comments:', error);
     }
 }
@@ -63,28 +64,18 @@ async function handleFormSubmit(event) {
     const nameVal = event.target.elements.name.value;
     const commentVal = event.target.elements.comments.value;
 
+    const commentData = {
+        name: nameVal,
+        comment: commentVal
+    };
 
-    let hasError = false;
-    if (nameVal === '') {
-        hasError = true;
-    }
-    if (commentVal === '') {
-        hasError = true;
-    }
-
-    if (!hasError) {
-        const commentData = {
-            name: nameVal,
-            comment: commentVal
-        };
-
-        try {
-            await bandSiteApi.postComment(commentData); 
-            renderComment(); 
-            event.target.reset(); 
-        } catch (error) {
-            console.error('Failed to submit comment:', error);
-        }
+    try {
+        await bandSiteApi.postComment(commentData); 
+        renderComment(); 
+        event.target.reset(); 
+    } 
+    catch (error) {
+        console.error('Failed to submit comment:', error);
     }
 }
 

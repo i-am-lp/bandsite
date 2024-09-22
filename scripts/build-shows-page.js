@@ -103,7 +103,8 @@ async function renderShows() {
             const showCard = createShowsPage(show);
             buildShowsEl.appendChild(showCard);
         });
-    } catch (error) {
+    }
+    catch (error) {
         console.error('Failed to load shows:', error);
     }
 }
